@@ -1,0 +1,56 @@
+.req-amount {
+	padding: 30px;
+	display: flex;
+	border: 1px solid #eeeeee;
+}
+
+.table .tbody .tr .td.company {
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.text-truncate {
+	max-width: 150px;
+}
+
+.text-truncate:hover {
+	max-width: unset;
+}
+
+.table .tbody .tr .td,
+.table .thead .tr .th {
+	flex-basis: 11.111111%;
+}
+
+.table .tbody .tr .td.serial,
+.table .thead .tr .th.serial {
+	flex-basis: 5%;
+}
+
+.table .tbody .tr .td.serial span {
+	background: var(--blue);
+	font-weight: bold;
+	color: #ffffff;
+	padding: 2.5px 10px;
+	margin-left: -5px;
+}
+
+.table .tbody .tr .td.company,
+.table .thead .tr .th.company {
+	flex-basis: 25%;
+}
+
+.table .tbody .tr .td.sub-end,
+.table .thead .tr .th.sub-end {
+	flex-basis: 20%;
+}
+
+.table .tbody .tr .td.allo-date,
+.table .thead .tr .th.allo-date {
+	flex-basis: 20%;
+}
+
+.table .tbody .tr .td.action svg {
+	height: 32px;
+	max-height: 32px
+}

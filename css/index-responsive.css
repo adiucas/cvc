@@ -1,0 +1,15 @@
+@media (max-width: 992px){
+	.market-highlights .section-title{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.market-highlights .section-title>div{
+		margin-bottom: 15px;
+	}
+	.market-highlights .section-title button span{
+		display: none;
+	}
+	
+}

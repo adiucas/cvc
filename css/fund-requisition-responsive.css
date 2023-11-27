@@ -1,0 +1,10 @@
+@media (max-width: 992px){
+	
+	.table .tbody .tr .td {
+	    flex-basis: 50%;
+	}
+	.tbody .td:nth-child(n+3){
+		margin-top: 15px;
+	}
+}
+

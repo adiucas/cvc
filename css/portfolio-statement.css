@@ -1,0 +1,207 @@
+/*===================================
+=            portfolio statement            =
+===================================*/
+
+.cust-card .desc {
+	position: relative;
+}
+
+.cust-card .counter {
+	font-weight: bold;
+	border-radius: 45px;
+	background: var(--red);
+	position: absolute;
+	right: 50%;
+	top: 15px;
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+}
+
+.news {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.date,
+.trading-code {
+	color: var(--blue);
+	font-weight: bold;
+}
+
+.news .mobile-head {
+	font-weight: bold;
+	font-family: "Montserrat", sans-serif;
+}
+
+.news-text {
+	text-align: justify;
+}
+
+
+.custom-indicators {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+
+
+.custom-indicators .wrapper {
+	background: var(--blue);
+	width: 20px;
+	height: 20px;
+	color: #fff;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	margin: 0 5px;
+	cursor: pointer;
+	border: 1px solid var(--blue);
+	transition: 0.3s all;
+	font-size: 14px;
+}
+
+.custom-indicators .wrapper:hover {
+	background: transparent;
+	transform: scale(1.3);
+	color: var(--blue);
+}
+
+.custom-indicators .wrapper.active {
+	background: transparent;
+	transform: scale(1.3);
+	color: var(--blue);
+}
+
+.mp-card {
+	background: #ffffff;
+	border-radius: 10px;
+	border: 1px solid var(--red);
+}
+
+.mp-card .row {
+	align-items: center;
+}
+
+.mp-card.card {
+	-ms-flex-direction: row;
+	flex-direction: row;
+	align-content: center;
+	align-items: center;
+	width: 100%;
+}
+
+.mp-card .serial span {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+	background: var(--red);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mp-card .serial {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 16px;
+}
+
+.mpc-holder {
+	overflow: hidden;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.mpc-holder:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.mpc-holder-title {
+	font-weight: bold;
+	font-family: "Montserrat", sans-serif;
+	display: none;
+}
+
+.mpc-holder i {
+	color: var(--blue);
+}
+
+.mpc-holder i,
+.mpc-holder svg {
+	margin-right: 10px;
+}
+
+.mp-hint {
+	padding: 10px 5px;
+	background: var(--red);
+	border-radius: 50px;
+	margin-top: 15px;
+	color: #ffffff;
+}
+
+.mp-hint>.heads {
+	text-align: center;
+	font-family: "Montserrat", sans-serif;
+	font-weight: bold;
+}
+
+.mp-hint .heads>.row div {
+	text-align: center;
+}
+
+.mp-hint>.row>div>i {
+	margin-left: 15px;
+}
+
+.mp-hint>.row div,
+.mp-hint>.row {
+	align-items: center;
+}
+
+.status {
+	padding: 5px 10px;
+	border-radius: 5px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.status.pending {
+	background-color: #ffc107;
+	color: #000000;
+}
+
+.status.rejected {
+	background-color: #dc3545;
+	color: #ffffff;
+}
+
+.status.payment {
+	background-color: #28a745;
+	color: #ffffff;
+}
+
+.ra-card {
+	display: flex;
+	align-items: flex-end;
+}
+
+.ra-card>div {
+	width: 100%;
+}
+
+/*=====  End of portfolio statement  ======*/

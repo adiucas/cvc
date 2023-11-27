@@ -1,0 +1,54 @@
+.cp-main-card .name-id {
+    border-right: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cp-main-card h2,
+.cp-main-card h4 {
+    color: var(--blue);
+}
+
+.cp-main-card .icon-text .icon {
+    color: var(--blue);
+    padding: 5px 9px;
+    border-radius: 50px;
+    height: 30px;
+    display: inline-block;
+    font-size: 14px;
+    text-align: center;
+    margin: 5px 5px 5px 0;
+    width: 30px;
+}
+
+.cp-img {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.cp-img div {
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    border-radius: 50%;
+}
+
+.cust-card .title {
+    background: var(--blue);
+    padding: 5px 15px;
+    color: #fff;
+    font-family: var(--head);
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.dd-bg {
+    background: #eeeeee;
+    padding: 5px 10px;
+    display: flex;
+    min-height: 31px;
+}

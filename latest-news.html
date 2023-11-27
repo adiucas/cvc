@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<!-- opengraph -->
+	<!-- <meta property="og:image" content="images/thumbnail.jpg"> -->
+	<title>Latest News | E-Securities Ltd.</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/common-responsive.css">
+	<link rel="stylesheet" href="css/latest-news.css">
+	<link rel="stylesheet" href="css/latest-news-responsive.css">
+	<!-- scripts -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<!--============================
+	=            header            =
+	=============================-->
+	<section class="sticky-top" w3-include-html="includes/header.html">
+	</section>
+
+	<!--==================================
+	=            latest news            =
+	===================================-->
+	<div class="container-fluid bg-lg latest-news">
+		<div class="row">
+			<div class="container ptb30">
+				<div class="section-title">
+					Latest News
+				</div>
+				<nav class="d-flex d-lg-none navbar navbar-expand-lg navbar-light justify-content-end align-items-end">
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#newsDaterFilterMobile" aria-controls="newsDaterFilterMobile" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="newsDaterFilterMobile">
+				  	<div class="cust-card mt-3">
+				  		<div class="desc">
+				  			<form>
+				  			  <div class="form-row">
+				  			    <div class="form-group col-md-4">
+				  			      <label>From Date</label>
+				  			      <input type="text" id="dpFrom" class="form-control">
+				  			    </div>
+				  			    <div class="form-group col-md-4">
+				  			      <label>To Date</label>
+				  			      <input type="text" id="dpTo" class="form-control">
+				  			    </div>
+				  			    <div class="form-group col-md-4">
+				  			      <label>Instrument</label>
+				  			      <select class="form-control input-sm" id="cmbCompany">
+				  			          <option class="first-option">Select Instrument</option>
+				  			          <option value="1JANATAMF">1JANATAMF</option>
+				  			          <option value="1STBSRS">1STBSRS</option>
+				  			          <option value="1STICB">1STICB</option>
+				  			          <option value="1STPRIMFMF">1STPRIMFMF</option>
+				  			          <option value="2NDICB">2NDICB</option>
+				  			          <option value="3RDICB">3RDICB</option>
+				  			          <option value="4THICB">4THICB</option>
+				  			          <option value="5THICB">5THICB</option>
+				  			          <option value="6THICB">6THICB</option>
+				  			          <option value="7THICB">7THICB</option>
+				  			          <option value="8THICB">8THICB</option>
+				  			          <option value="AAMRANET">AAMRANET</option>
+				  			          <option value="AAMRATECH">AAMRATECH</option>
+				  			          <option value="ABB1STMF">ABB1STMF</option>
+				  			          <option value="ABBANK">ABBANK</option>
+				  			          <option value="ABBISCUIT">ABBISCUIT</option>
+				  			          <option value="ACFL">ACFL</option>
+				  			          <option value="ACI">ACI</option>
+				  			          <option value="ACIFORMULA">ACIFORMULA</option>
+				  			          <option value="ACIZCBOND">ACIZCBOND</option>
+				  			          <option value="ACMELAB">ACMELAB</option>
+				  			          <option value="ACMEPL">ACMEPL</option>
+				  			          <option value="ACTIVEFINE">ACTIVEFINE</option>
+				  			          <option value="ADNTEL">ADNTEL</option>
+				  			          <option value="ADVENT">ADVENT</option>
+				  			          <option value="AFCAGRO">AFCAGRO</option>
+				  			          <option value="AFTABAUTO">AFTABAUTO</option>
+				  			          <option value="AGNISYSL">AGNISYSL</option>
+				  			          <option value="AGRANINS">AGRANINS</option>
+				  			          <option value="AHADJUTE">AHADJUTE</option>
+				  			          <option value="AIBL1STIMF">AIBL1STIMF</option>
+				  			          <option value="AIL">AIL</option>
+				  			          <option value="AIMS1STMF">AIMS1STMF</option>
+				  			          <option value="AL-HAJTEX">AL-HAJTEX</option>
+				  			          <option value="ALAMINCHEM">ALAMINCHEM</option>
+				  			          <option value="ALARABANK">ALARABANK</option>
+				  			          <option value="ALBARAKA">ALBARAKA</option>
+				  			          <option value="ALHAJTEX">ALHAJTEX</option>
+				  			          <option value="ALLTEX">ALLTEX</option>
+				  			          <option value="ALPHATOBA">ALPHATOBA</option>
+				  			          <option value="AMAMSEAFD">AMAMSEAFD</option>
+				  			          <option value="AMANFEED">AMANFEED</option>
+				  			          <option value="AMBEEPHA">AMBEEPHA</option>
+				  			          <option value="AMCL(PRAN)">AMCL(PRAN)</option>
+				  			          <option value="ANLIMAYARN">ANLIMAYARN</option>
+				  			          <option value="ANWARGALV">ANWARGALV</option>
+				  			          <option value="AOL">AOL</option>
+				  			          <option value="APEXFOODS">APEXFOODS</option>
+				  			          <option value="APEXFOOT">APEXFOOT</option>
+				  			          <option value="APEXSPINN">APEXSPINN</option>
+				  			          <option value="APEXTANRY">APEXTANRY</option>
+				  			          <option value="APEXWEAV">APEXWEAV</option>
+				  			          <option value="APOLOISPAT">APOLOISPAT</option>
+				  			          <option value="APSCLBOND">APSCLBOND</option>
+				  			          <option value="ARACEMDEB">ARACEMDEB</option>
+				  			          <option value="ARAMIT">ARAMIT</option>
+				  			          <option value="ARAMITCEM">ARAMITCEM</option>
+				  			          <option value="ARBEETEX">ARBEETEX</option>
+				  			          <option value="ARGONDENIM">ARGONDENIM</option>
+				  			          <option value="AROMATEA">AROMATEA</option>
+				  			          <option value="ASHRAFTEX">ASHRAFTEX</option>
+				  			          <option value="ASIAINS">ASIAINS</option>
+				  			          <option value="ASIAPACINS">ASIAPACINS</option>
+				  			          <option value="ATCSLGF">ATCSLGF</option>
+				  			          <option value="ATLASBANG">ATLASBANG</option>
+				  			          <option value="AZADIPRIN">AZADIPRIN</option>
+				  			          <option value="AZIZPIPES">AZIZPIPES</option>
+				  			          <option value="B.T.C.">B.T.C.</option>
+				  			          <option value="BANGAS">BANGAS</option>
+				  			          <option value="BANGLAPRO">BANGLAPRO</option>
+				  			          <option value="BANKASIA">BANKASIA</option>
+				  			          <option value="BARKAPOWER">BARKAPOWER</option>
+				  			          <option value="BATASHOE">BATASHOE</option>
+				  			          <option value="BATBC">BATBC</option>
+				  			          <option value="BAYLEASING">BAYLEASING</option>
+				  			          <option value="BBS">BBS</option>
+				  			          <option value="BBSCABLES">BBSCABLES</option>
+				  			          <option value="BCIL">BCIL</option>
+				  			          <option value="BCILDEB">BCILDEB</option>
+				  			          <option value="BDAUTOCA">BDAUTOCA</option>
+				  			          <option value="BDCOM">BDCOM</option>
+				  			          <option value="BDCOM PRFS">BDCOM PRFS</option>
+				  			          <option value="BDDYE">BDDYE</option>
+				  			          <option value="BDFINANCE">BDFINANCE</option>
+				  			          <option value="BDHOTELS">BDHOTELS</option>
+				  			          <option value="BDLAMPS">BDLAMPS</option>
+				  			          <option value="BDLUGGAGE">BDLUGGAGE</option>
+				  			          <option value="BDLUGGDEB">BDLUGGDEB</option>
+				  			          <option value="BDONLINE">BDONLINE</option>
+				  			          <option value="BDPLANT">BDPLANT</option>
+				  			          <option value="BDSERVICE">BDSERVICE</option>
+				  			          <option value="BDTHAI">BDTHAI</option>
+				  			          <option value="BDTHAI(PS)">BDTHAI(PS)</option>
+				  			          <option value="BDTHAIFOOD">BDTHAIFOOD</option>
+				  			          <option value="BDWELDING">BDWELDING</option>
+				  			          <option value="BDZIPPDEB">BDZIPPDEB</option>
+				  			          <option value="BDZIPPER">BDZIPPER</option>
+				  			          <option value="BEACHHATCH">BEACHHATCH</option>
+				  			          <option value="BEACONPHAR">BEACONPHAR</option>
+				  			          <option value="BEMCO">BEMCO</option>
+				  			          <option value="BENGALBISC">BENGALBISC</option>
+				  			          <option value="BENGALFINE">BENGALFINE</option>
+				  			          <option value="BENGALWTL">BENGALWTL</option>
+				  			          <option value="BERGERPBL">BERGERPBL</option>
+				  			          <option value="BEXGSUKUK">BEXGSUKUK</option>
+				  			          <option value="BEXIMCO">BEXIMCO</option>
+				  			          <option value="BEXIMCODEB">BEXIMCODEB</option>
+				  			          <option value="BEXTEX">BEXTEX</option>
+				  			          <option value="BGIC">BGIC</option>
+				  			          <option value="BIFC">BIFC</option>
+				  			          <option value="BIONICFOOD">BIONICFOOD</option>
+				  			          <option value="BLTC">BLTC</option>
+				  			          <option value="BNICL">BNICL</option>
+				  			          <option value="BOC">BOC</option>
+				  			          <option value="BPHRM">BPHRM</option>
+				  			          <option value="BPML">BPML</option>
+				  			          <option value="BPPL">BPPL</option>
+				  			          <option value="BRACBANK">BRACBANK</option>
+				  			          <option value="BRACSCBOND">BRACSCBOND</option>
+				  			          <option value="BSC">BSC</option>
+				  			          <option value="BSCCL">BSCCL</option>
+				  			          <option value="BSRMLTD">BSRMLTD</option>
+				  			          <option value="BSRMSTEEL">BSRMSTEEL</option>
+				  			          <option value="BSTEEL">BSTEEL</option>
+				  			          <option value="BWEL">BWEL</option>
+				  			          <option value="BXDEB">BXDEB</option>
+				  			          <option value="BXDENIMDEB">BXDENIMDEB</option>
+				  			          <option value="BXDENIMS">BXDENIMS</option>
+				  			          <option value="BXFISHDEB">BXFISHDEB</option>
+				  			          <option value="BXFISHERY">BXFISHERY</option>
+				  			          <option value="BXINFDEB">BXINFDEB</option>
+				  			          <option value="BXINFUSION">BXINFUSION</option>
+				  			          <option value="BXKNIDEB">BXKNIDEB</option>
+				  			          <option value="BXKNIT">BXKNIT</option>
+				  			          <option value="BXKNITDEB">BXKNITDEB</option>
+				  			          <option value="BXPDEB">BXPDEB</option>
+				  			          <option value="BXPHARMA">BXPHARMA</option>
+				  			          <option value="BXSYNDEB">BXSYNDEB</option>
+				  			          <option value="BXSYNTH">BXSYNTH</option>
+				  			          <option value="BXTEX">BXTEX</option>
+				  			          <option value="BXTEXDEB">BXTEXDEB</option>
+				  			          <option value="CAPMBDBLMF">CAPMBDBLMF</option>
+				  			          <option value="CENTRALINS">CENTRALINS</option>
+				  			          <option value="CENTRALPHL">CENTRALPHL</option>
+				  			          <option value="CHICTEX">CHICTEX</option>
+				  			          <option value="CITYBANK">CITYBANK</option>
+				  			          <option value="CITYGENINS">CITYGENINS</option>
+				  			          <option value="CMCKAMAL">CMCKAMAL</option>
+				  			          <option value="CNATEX">CNATEX</option>
+				  			          <option value="CONFIDCEM">CONFIDCEM</option>
+				  			          <option value="CONTININS">CONTININS</option>
+				  			          <option value="COPPERTECH">COPPERTECH</option>
+				  			          <option value="CRYSTALINS">CRYSTALINS</option>
+				  			          <option value="CSE">CSE</option>
+				  			          <option value="CTGCEMENT">CTGCEMENT</option>
+				  			          <option value="CTGVEG">CTGVEG</option>
+				  			          <option value="CVOPRL">CVOPRL</option>
+				  			          <option value="DACCADYE">DACCADYE</option>
+				  			          <option value="DAFODILCOM">DAFODILCOM</option>
+				  			          <option value="DANDYDYE">DANDYDYE</option>
+				  			          <option value="DBH">DBH</option>
+				  			          <option value="DBH1STMF">DBH1STMF</option>
+				  			          <option value="DEBARACEM">DEBARACEM</option>
+				  			          <option value="DEBBDLUGG">DEBBDLUGG</option>
+				  			          <option value="DEBBDWELD ">DEBBDWELD </option>
+				  			          <option value="DEBBDZIPP">DEBBDZIPP</option>
+				  			          <option value="DEBBXDENIM">DEBBXDENIM</option>
+				  			          <option value="DEBBXFISH">DEBBXFISH</option>
+				  			          <option value="DEBBXKNI">DEBBXKNI</option>
+				  			          <option value="DEBBXTEX">DEBBXTEX</option>
+				  			          <option value="DELTALIFE">DELTALIFE</option>
+				  			          <option value="DELTAMILL">DELTAMILL</option>
+				  			          <option value="DELTASPINN">DELTASPINN</option>
+				  			          <option value="DESCO">DESCO</option>
+				  			          <option value="DESHBANDHU">DESHBANDHU</option>
+				  			          <option value="DGIC">DGIC</option>
+				  			          <option value="DHAKABANK">DHAKABANK</option>
+				  			          <option value="DHAKAFISH">DHAKAFISH</option>
+				  			          <option value="DHAKAINS">DHAKAINS</option>
+				  			          <option value="DHAKAVEG">DHAKAVEG</option>
+				  			          <option value="DOMINAGE">DOMINAGE</option>
+				  			          <option value="DOREENPWR">DOREENPWR</option>
+				  			          <option value="DSHGARME">DSHGARME</option>
+				  			          <option value="DSSL">DSSL</option>
+				  			          <option value="DULAMIACOT">DULAMIACOT</option>
+				  			          <option value="DUTCHBANGL">DUTCHBANGL</option>
+				  			          <option value="DYNAMICTEX">DYNAMICTEX</option>
+				  			          <option value="EAGLEBOX">EAGLEBOX</option>
+				  			          <option value="EAGLESTAR">EAGLESTAR</option>
+				  			          <option value="EASTERNINS">EASTERNINS</option>
+				  			          <option value="EASTLAND">EASTLAND</option>
+				  			          <option value="EASTRNLUB">EASTRNLUB</option>
+				  			          <option value="EBL">EBL</option>
+				  			          <option value="EBL1STMF">EBL1STMF</option>
+				  			          <option value="EBLNRBMF">EBLNRBMF</option>
+				  			          <option value="EBNRB1">EBNRB1</option>
+				  			          <option value="ECABLES">ECABLES</option>
+				  			          <option value="EGEN">EGEN</option>
+				  			          <option value="EHL">EHL</option>
+				  			          <option value="EHLDEB">EHLDEB</option>
+				  			          <option value="EIL">EIL</option>
+				  			          <option value="ELCAMELIA">ELCAMELIA</option>
+				  			          <option value="EMERALDOIL">EMERALDOIL</option>
+				  			          <option value="ENGINEER">ENGINEER</option>
+				  			          <option value="ENVOYTEX">ENVOYTEX</option>
+				  			          <option value="EPGL">EPGL</option>
+				  			          <option value="ESQUIRENIT">ESQUIRENIT</option>
+				  			          <option value="ETL">ETL</option>
+				  			          <option value="EXCELSHOE">EXCELSHOE</option>
+				  			          <option value="EXIM1STMF">EXIM1STMF</option>
+				  			          <option value="EXIMBANK">EXIMBANK</option>
+				  			          <option value="FAHAD">FAHAD</option>
+				  			          <option value="FAHADIND">FAHADIND</option>
+				  			          <option value="FAMILYTEX">FAMILYTEX</option>
+				  			          <option value="FARCHEM">FARCHEM</option>
+				  			          <option value="FAREASTFIN">FAREASTFIN</option>
+				  			          <option value="FAREASTLIF">FAREASTLIF</option>
+				  			          <option value="FASFIN ">FASFIN </option>
+				  			          <option value="FBFIF">FBFIF</option>
+				  			          <option value="FEDERALINS">FEDERALINS</option>
+				  			          <option value="FEKDIL">FEKDIL</option>
+				  			          <option value="FHDIL">FHDIL</option>
+				  			          <option value="FIDELASSET">FIDELASSET</option>
+				  			          <option value="FINEFOODS">FINEFOODS</option>
+				  			          <option value="FIRSTFIN">FIRSTFIN</option>
+				  			          <option value="FIRSTSBANK">FIRSTSBANK</option>
+				  			          <option value="FORTUNE">FORTUNE</option>
+				  			          <option value="FU-WANGFOO">FU-WANGFOO</option>
+				  			          <option value="FUWANGCER">FUWANGCER</option>
+				  			          <option value="FUWANGFOOD">FUWANGFOOD</option>
+				  			          <option value="GACHIHATA">GACHIHATA</option>
+				  			          <option value="GBBPOWER">GBBPOWER</option>
+				  			          <option value="GBJVFOOD">GBJVFOOD</option>
+				  			          <option value="GEM">GEM</option>
+				  			          <option value="GEMINISEA">GEMINISEA</option>
+				  			          <option value="GEMKNIT">GEMKNIT</option>
+				  			          <option value="GEMKNITWEAR">GEMKNITWEAR</option>
+				  			          <option value="GENEXIL">GENEXIL</option>
+				  			          <option value="GENNEXT">GENNEXT</option>
+				  			          <option value="GHAIL">GHAIL</option>
+				  			          <option value="GHCL">GHCL</option>
+				  			          <option value="GLAXOSMITH">GLAXOSMITH</option>
+				  			          <option value="GLAXOWELL">GLAXOWELL</option>
+				  			          <option value="GLOBALINS">GLOBALINS</option>
+				  			          <option value="GMGIND">GMGIND</option>
+				  			          <option value="GOLDENSON">GOLDENSON</option>
+				  			          <option value="GP">GP</option>
+				  			          <option value="GPHISPAT">GPHISPAT</option>
+				  			          <option value="GQBALLPEN">GQBALLPEN</option>
+				  			          <option value="GRAMEEN1">GRAMEEN1</option>
+				  			          <option value="GRAMEENS2">GRAMEENS2</option>
+				  			          <option value="GREENDELMF">GREENDELMF</option>
+				  			          <option value="GREENDELT">GREENDELT</option>
+				  			          <option value="GSPFINANCE">GSPFINANCE</option>
+				  			          <option value="GULFOODS">GULFOODS</option>
+				  			          <option value="HAKKANIPUL">HAKKANIPUL</option>
+				  			          <option value="HEIDELBCEM">HEIDELBCEM</option>
+				  			          <option value="HFL">HFL</option>
+				  			          <option value="HIGHSPEED">HIGHSPEED</option>
+				  			          <option value="HILLPLANT">HILLPLANT</option>
+				  			          <option value="HIMADRI">HIMADRI</option>
+				  			          <option value="HRTEX">HRTEX</option>
+				  			          <option value="HWAWELLTEX">HWAWELLTEX</option>
+				  			          <option value="IBBLPBOND">IBBLPBOND</option>
+				  			          <option value="IBNSINA">IBNSINA</option>
+				  			          <option value="IBP">IBP</option>
+				  			          <option value="ICB">ICB</option>
+				  			          <option value="ICB1STNRB">ICB1STNRB</option>
+				  			          <option value="ICB2NDNRB">ICB2NDNRB</option>
+				  			          <option value="ICB3RDNRB">ICB3RDNRB</option>
+				  			          <option value="ICBAGRANI1">ICBAGRANI1</option>
+				  			          <option value="ICBAMCL1ST">ICBAMCL1ST</option>
+				  			          <option value="ICBAMCL2ND">ICBAMCL2ND</option>
+				  			          <option value="ICBEPMF1S1">ICBEPMF1S1</option>
+				  			          <option value="ICBIBANK">ICBIBANK</option>
+				  			          <option value="ICBISLAMIC">ICBISLAMIC</option>
+				  			          <option value="ICBISLAMICBANK">ICBISLAMICBANK</option>
+				  			          <option value="ICBSONALI1">ICBSONALI1</option>
+				  			          <option value="IDLC">IDLC</option>
+				  			          <option value="IFADAUTOS">IFADAUTOS</option>
+				  			          <option value="IFIC">IFIC</option>
+				  			          <option value="IFIC1STMF">IFIC1STMF</option>
+				  			          <option value="IFILISLMF1">IFILISLMF1</option>
+				  			          <option value="ILFSL">ILFSL</option>
+				  			          <option value="IMAMBUTTON">IMAMBUTTON</option>
+				  			          <option value="INDEXAGRO">INDEXAGRO</option>
+				  			          <option value="INTECH">INTECH</option>
+				  			          <option value="INTRACO">INTRACO</option>
+				  			          <option value="IPDC">IPDC</option>
+				  			          <option value="ISLAMIBANK">ISLAMIBANK</option>
+				  			          <option value="ISLAMICFIN">ISLAMICFIN</option>
+				  			          <option value="ISLAMIINS">ISLAMIINS</option>
+				  			          <option value="ISLAMJUTE">ISLAMJUTE</option>
+				  			          <option value="ISNLTD">ISNLTD</option>
+				  			          <option value="ITC">ITC</option>
+				  			          <option value="JAGO">JAGO</option>
+				  			          <option value="JAMUNABANK">JAMUNABANK</option>
+				  			          <option value="JAMUNAOIL">JAMUNAOIL</option>
+				  			          <option value="JANATAINS">JANATAINS</option>
+				  			          <option value="JBCL">JBCL</option>
+				  			          <option value="JHCHEM">JHCHEM</option>
+				  			          <option value="JHCHEMICAL">JHCHEMICAL</option>
+				  			          <option value="JMISMDL">JMISMDL</option>
+				  			          <option value="JUTESPINN">JUTESPINN</option>
+				  			          <option value="KARIMPIPE">KARIMPIPE</option>
+				  			          <option value="KARNAPHULI">KARNAPHULI</option>
+				  			          <option value="KAY&amp;QUE">KAY&amp;QUE</option>
+				  			          <option value="KBPPWBIL">KBPPWBIL</option>
+				  			          <option value="KDSALTD">KDSALTD</option>
+				  			          <option value="KEYACOSMET">KEYACOSMET</option>
+				  			          <option value="KEYADETERG">KEYADETERG</option>
+				  			          <option value="KEYADTTERG">KEYADTTERG</option>
+				  			          <option value="KHAZA">KHAZA</option>
+				  			          <option value="KOHINOOR">KOHINOOR</option>
+				  			          <option value="KPCL">KPCL</option>
+				  			          <option value="KPPL">KPPL</option>
+				  			          <option value="KTL">KTL</option>
+				  			          <option value="LANKABAFIN">LANKABAFIN</option>
+				  			          <option value="LEGACYFOOT">LEGACYFOOT</option>
+				  			          <option value="LEXCO">LEXCO</option>
+				  			          <option value="LHBL">LHBL</option>
+				  			          <option value="LIBRAINFU">LIBRAINFU</option>
+				  			          <option value="LIBRAPHARM">LIBRAPHARM</option>
+				  			          <option value="LINDEBD">LINDEBD</option>
+				  			          <option value="LOVELLO">LOVELLO</option>
+				  			          <option value="LRBDL">LRBDL</option>
+				  			          <option value="LRGLOBMF1">LRGLOBMF1</option>
+				  			          <option value="MAKSONSPIN">MAKSONSPIN</option>
+				  			          <option value="MALEKSPIN">MALEKSPIN</option>
+				  			          <option value="MAQENTER">MAQENTER</option>
+				  			          <option value="MAQPAPER">MAQPAPER</option>
+				  			          <option value="MARICO">MARICO</option>
+				  			          <option value="MARKBD">MARKBD</option>
+				  			          <option value="MATINSPINN">MATINSPINN</option>
+				  			          <option value="MBL1STMF">MBL1STMF</option>
+				  			          <option value="MEGCONMILK">MEGCONMILK</option>
+				  			          <option value="MEGHNACEM">MEGHNACEM</option>
+				  			          <option value="MEGHNALIFE">MEGHNALIFE</option>
+				  			          <option value="MEGHNAPET">MEGHNAPET</option>
+				  			          <option value="MEGHNASHRM">MEGHNASHRM</option>
+				  			          <option value="MEGHNAVEG">MEGHNAVEG</option>
+				  			          <option value="MERCANBANK">MERCANBANK</option>
+				  			          <option value="MERCINS">MERCINS</option>
+				  			          <option value="METALEXCR">METALEXCR</option>
+				  			          <option value="METROSPIN">METROSPIN</option>
+				  			          <option value="MHOSSAIN">MHOSSAIN</option>
+				  			          <option value="MHSML">MHSML</option>
+				  			          <option value="MICEMENT">MICEMENT</option>
+				  			          <option value="MIDASFIN">MIDASFIN</option>
+				  			          <option value="MIRACLEIND">MIRACLEIND</option>
+				  			          <option value="MIRAKHTER">MIRAKHTER</option>
+				  			          <option value="MITATEX">MITATEX</option>
+				  			          <option value="MITHUNKNIT">MITHUNKNIT</option>
+				  			          <option value="MJLBD">MJLBD</option>
+				  			          <option value="MLDYEING">MLDYEING</option>
+				  			          <option value="MODERNCEM">MODERNCEM</option>
+				  			          <option value="MODERNDYE">MODERNDYE</option>
+				  			          <option value="MODERNIND">MODERNIND</option>
+				  			          <option value="MONAFOOD">MONAFOOD</option>
+				  			          <option value="MONNOCERA">MONNOCERA</option>
+				  			          <option value="MONNOFABR">MONNOFABR</option>
+				  			          <option value="MONNOJTX">MONNOJTX</option>
+				  			          <option value="MONNOSTAF">MONNOSTAF</option>
+				  			          <option value="MONOSPOOL">MONOSPOOL</option>
+				  			          <option value="MPETROLEUM">MPETROLEUM</option>
+				  			          <option value="MTB">MTB</option>
+				  			          <option value="MUTUALJUTE">MUTUALJUTE</option>
+				  			          <option value="NAHEEACP">NAHEEACP</option>
+				  			          <option value="NATLIFEINS">NATLIFEINS</option>
+				  			          <option value="NATOXYGEN">NATOXYGEN</option>
+				  			          <option value="NAVANACNG">NAVANACNG</option>
+				  			          <option value="NBL">NBL</option>
+				  			          <option value="NCCBANK">NCCBANK</option>
+				  			          <option value="NCCBLMF1">NCCBLMF1</option>
+				  			          <option value="NEWLINE">NEWLINE</option>
+				  			          <option value="NFML">NFML</option>
+				  			          <option value="NHFIL">NHFIL</option>
+				  			          <option value="NILOYCEM">NILOYCEM</option>
+				  			          <option value="NITOLINS">NITOLINS</option>
+				  			          <option value="NLI1STMF">NLI1STMF</option>
+				  			          <option value="NORTHERN">NORTHERN</option>
+				  			          <option value="NORTHRNINS">NORTHRNINS</option>
+				  			          <option value="NPOLYMER">NPOLYMER</option>
+				  			          <option value="NRBCBANK">NRBCBANK</option>
+				  			          <option value="NTC">NTC</option>
+				  			          <option value="NTLTUBES">NTLTUBES</option>
+				  			          <option value="NURANI">NURANI</option>
+				  			          <option value="OAL">OAL</option>
+				  			          <option value="OCL">OCL</option>
+				  			          <option value="OIMEX">OIMEX</option>
+				  			          <option value="OLYMPIC">OLYMPIC</option>
+				  			          <option value="ONEBANKLTD">ONEBANKLTD</option>
+				  			          <option value="ORIONINFU">ORIONINFU</option>
+				  			          <option value="ORIONPHARM">ORIONPHARM</option>
+				  			          <option value="PADMACEM">PADMACEM</option>
+				  			          <option value="PADMALIFE">PADMALIFE</option>
+				  			          <option value="PADMAOIL">PADMAOIL</option>
+				  			          <option value="PADMAPRINT">PADMAPRINT</option>
+				  			          <option value="PAPERPROC">PAPERPROC</option>
+				  			          <option value="PARAGON">PARAGON</option>
+				  			          <option value="PARAMOUNT">PARAMOUNT</option>
+				  			          <option value="PDL">PDL</option>
+				  			          <option value="PENINSULA">PENINSULA</option>
+				  			          <option value="PEOPLESINS">PEOPLESINS</option>
+				  			          <option value="PERFUMCHM">PERFUMCHM</option>
+				  			          <option value="PETROSYNTH">PETROSYNTH</option>
+				  			          <option value="PF1STMF">PF1STMF</option>
+				  			          <option value="PHARMACO">PHARMACO</option>
+				  			          <option value="PHARMAID">PHARMAID</option>
+				  			          <option value="PHENIXINS">PHENIXINS</option>
+				  			          <option value="PHENIXLETH">PHENIXLETH</option>
+				  			          <option value="PHOENIXFIN">PHOENIXFIN</option>
+				  			          <option value="PHPMF1">PHPMF1</option>
+				  			          <option value="PIONEERINS">PIONEERINS</option>
+				  			          <option value="PLFSL">PLFSL</option>
+				  			          <option value="PLFSL PRFF">PLFSL PRFF</option>
+				  			          <option value="POPULAR1MF">POPULAR1MF</option>
+				  			          <option value="POPULARLIF">POPULARLIF</option>
+				  			          <option value="POWERGRID">POWERGRID</option>
+				  			          <option value="PRAGATIINS">PRAGATIINS</option>
+				  			          <option value="PRAGATILIF">PRAGATILIF</option>
+				  			          <option value="PREMIERBAN">PREMIERBAN</option>
+				  			          <option value="PREMIERCEM ">PREMIERCEM </option>
+				  			          <option value="PREMIERLEA">PREMIERLEA</option>
+				  			          <option value="PRIME1ICBA">PRIME1ICBA</option>
+				  			          <option value="PRIMEBANK">PRIMEBANK</option>
+				  			          <option value="PRIMEFIN">PRIMEFIN</option>
+				  			          <option value="PRIMEINSUR">PRIMEINSUR</option>
+				  			          <option value="PRIMELIFE">PRIMELIFE</option>
+				  			          <option value="PRIMETEX">PRIMETEX</option>
+				  			          <option value="PROGRESLIF">PROGRESLIF</option>
+				  			          <option value="PROVATIINS">PROVATIINS</option>
+				  			          <option value="PTL">PTL</option>
+				  			          <option value="PUBALIBANK">PUBALIBANK</option>
+				  			          <option value="PURABIGEN">PURABIGEN</option>
+				  			          <option value="QSMSILK">QSMSILK</option>
+				  			          <option value="QSMTEX">QSMTEX</option>
+				  			          <option value="QUASEMIND">QUASEMIND</option>
+				  			          <option value="QUEENSOUTH">QUEENSOUTH</option>
+				  			          <option value="RABEYAFLO">RABEYAFLO</option>
+				  			          <option value="RAHIMAFOOD">RAHIMAFOOD</option>
+				  			          <option value="RAHIMTEXT">RAHIMTEXT</option>
+				  			          <option value="RAHMANCHEM">RAHMANCHEM</option>
+				  			          <option value="RAKCERAMIC">RAKCERAMIC</option>
+				  			          <option value="RANFOUNDRY">RANFOUNDRY</option>
+				  			          <option value="RANGAFOOD">RANGAFOOD</option>
+				  			          <option value="RASPIT">RASPIT</option>
+				  			          <option value="RASPITDATA">RASPITDATA</option>
+				  			          <option value="RDFOOD">RDFOOD</option>
+				  			          <option value="RECKIT&amp;COL">RECKIT&amp;COL</option>
+				  			          <option value="RECKITTBEN">RECKITTBEN</option>
+				  			          <option value="REGENTTEX">REGENTTEX</option>
+				  			          <option value="RELIANCE1">RELIANCE1</option>
+				  			          <option value="RELIANCINS">RELIANCINS</option>
+				  			          <option value="RENATA">RENATA</option>
+				  			          <option value="RENWICKJA">RENWICKJA</option>
+				  			          <option value="REPUBLIC">REPUBLIC</option>
+				  			          <option value="RINGSHINE">RINGSHINE</option>
+				  			          <option value="RNSPIN">RNSPIN</option>
+				  			          <option value="ROBI">ROBI</option>
+				  			          <option value="ROSEHEAVEN">ROSEHEAVEN</option>
+				  			          <option value="RSRMSTEEL">RSRMSTEEL</option>
+				  			          <option value="RUNNERAUTO">RUNNERAUTO</option>
+				  			          <option value="RUPALIBANK">RUPALIBANK</option>
+				  			          <option value="RUPALIINS">RUPALIINS</option>
+				  			          <option value="RUPALILIFE">RUPALILIFE</option>
+				  			          <option value="RUPONOIL">RUPONOIL</option>
+				  			          <option value="S ALAM(P)">S ALAM(P)</option>
+				  			          <option value="SAFKOSPINN">SAFKOSPINN</option>
+				  			          <option value="SAIFPOWER">SAIFPOWER</option>
+				  			          <option value="SAIHAMCOT">SAIHAMCOT</option>
+				  			          <option value="SAIHAMTEX">SAIHAMTEX</option>
+				  			          <option value="SAJIBKNIT">SAJIBKNIT</option>
+				  			          <option value="SALAMCRST">SALAMCRST</option>
+				  			          <option value="SALEHCARPT">SALEHCARPT</option>
+				  			          <option value="SALVOCHEM">SALVOCHEM</option>
+				  			          <option value="SAMATALETH">SAMATALETH</option>
+				  			          <option value="SAMORITA">SAMORITA</option>
+				  			          <option value="SANDHANINS">SANDHANINS</option>
+				  			          <option value="SAPORTL">SAPORTL</option>
+				  			          <option value="SAVAREFR">SAVAREFR</option>
+				  			          <option value="SBACBANK">SBACBANK</option>
+				  			          <option value="SEAPEARL">SEAPEARL</option>
+				  			          <option value="SEBL1STMF">SEBL1STMF</option>
+				  			          <option value="SEMLFBSLGF">SEMLFBSLGF</option>
+				  			          <option value="SEMLIBBLSF">SEMLIBBLSF</option>
+				  			          <option value="SEMLLECMF">SEMLLECMF</option>
+				  			          <option value="SHAHJABANK">SHAHJABANK</option>
+				  			          <option value="SHASHADNIM">SHASHADNIM</option>
+				  			          <option value="SHEPHERD">SHEPHERD</option>
+				  			          <option value="SHINEPUKUR">SHINEPUKUR</option>
+				  			          <option value="SHURWID">SHURWID</option>
+				  			          <option value="SHYAMPSUG">SHYAMPSUG</option>
+				  			          <option value="SIBL">SIBL</option>
+				  			          <option value="SILCOPHL">SILCOPHL</option>
+				  			          <option value="SILVAPHL">SILVAPHL</option>
+				  			          <option value="SIMTEX">SIMTEX</option>
+				  			          <option value="SINGERBD">SINGERBD</option>
+				  			          <option value="SINOBANGLA">SINOBANGLA</option>
+				  			          <option value="SKICL">SKICL</option>
+				  			          <option value="SKTRIMS">SKTRIMS</option>
+				  			          <option value="SONALIANSH">SONALIANSH</option>
+				  			          <option value="SONALILIFE">SONALILIFE</option>
+				  			          <option value="SONALIPAPR">SONALIPAPR</option>
+				  			          <option value="SONARBAINS">SONARBAINS</option>
+				  			          <option value="SONARGAON">SONARGAON</option>
+				  			          <option value="SOUTHEASTB">SOUTHEASTB</option>
+				  			          <option value="SPCERAMICS">SPCERAMICS</option>
+				  			          <option value="SPCL">SPCL</option>
+				  			          <option value="SPPCL">SPPCL</option>
+				  			          <option value="SQTEX">SQTEX</option>
+				  			          <option value="SQUARETEXT">SQUARETEXT</option>
+				  			          <option value="SQURPHARMA">SQURPHARMA</option>
+				  			          <option value="SREEPURTEX">SREEPURTEX</option>
+				  			          <option value="SSSTEEL">SSSTEEL</option>
+				  			          <option value="STANCERAM">STANCERAM</option>
+				  			          <option value="STANDARINS">STANDARINS</option>
+				  			          <option value="STANDBANKL">STANDBANKL</option>
+				  			          <option value="STM(ORD)">STM(ORD)</option>
+				  			          <option value="STYLECRAFT">STYLECRAFT</option>
+				  			          <option value="SUMITPOWER">SUMITPOWER</option>
+				  			          <option value="SUMMIT PRF">SUMMIT PRF</option>
+				  			          <option value="SUNLIFEINS">SUNLIFEINS</option>
+				  			          <option value="TAKAFULINS">TAKAFULINS</option>
+				  			          <option value="TALLUSPIN">TALLUSPIN</option>
+				  			          <option value="TAMIJTEX">TAMIJTEX</option>
+				  			          <option value="TBL">TBL</option>
+				  			          <option value="test">test</option>
+				  			          <option value="TEXPICK">TEXPICK</option>
+				  			          <option value="TITASGAS">TITASGAS</option>
+				  			          <option value="TOSRIFA">TOSRIFA</option>
+				  			          <option value="TRIPTI">TRIPTI</option>
+				  			          <option value="TRUSTB1MF">TRUSTB1MF</option>
+				  			          <option value="TRUSTBANK">TRUSTBANK</option>
+				  			          <option value="TULIPDAIRY">TULIPDAIRY</option>
+				  			          <option value="TUNGHAI">TUNGHAI</option>
+				  			          <option value="UCB">UCB</option>
+				  			          <option value="ULC">ULC</option>
+				  			          <option value="UNIONBANK">UNIONBANK</option>
+				  			          <option value="UNIONCAP">UNIONCAP</option>
+				  			          <option value="UNIONINS">UNIONINS</option>
+				  			          <option value="UNIQUEHRL">UNIQUEHRL</option>
+				  			          <option value="UNITEDAIR">UNITEDAIR</option>
+				  			          <option value="UNITEDFIN">UNITEDFIN</option>
+				  			          <option value="UNITEDINS">UNITEDINS</option>
+				  			          <option value="UPGDCL">UPGDCL</option>
+				  			          <option value="USMANIAGL">USMANIAGL</option>
+				  			          <option value="UTTARABANK">UTTARABANK</option>
+				  			          <option value="UTTARAFIN">UTTARAFIN</option>
+				  			          <option value="VAMLBDMF1">VAMLBDMF1</option>
+				  			          <option value="VAMLRBBF">VAMLRBBF</option>
+				  			          <option value="VFSTDL">VFSTDL</option>
+				  			          <option value="WALTONHIL">WALTONHIL</option>
+				  			          <option value="WATACHEM">WATACHEM</option>
+				  			          <option value="WMSHIPYARD">WMSHIPYARD</option>
+				  			          <option value="WONDERTOYS">WONDERTOYS</option>
+				  			          <option value="YOUSUFLOUR">YOUSUFLOUR</option>
+				  			          <option value="YPL">YPL</option>
+				  			          <option value="ZAHEENSPIN">ZAHEENSPIN</option>
+				  			          <option value="ZAHINTEX">ZAHINTEX</option>
+				  			          <option value="ZEALBANGLA">ZEALBANGLA</option>
+				  			      </select>
+				  			    </div>
+				  			    <div class="form-group col-md-4 offset-md-4 text-center">
+				  			      <button type="submit" class="btn btn-primary pl-3 pr-3">Search</button>
+				  			    </div>
+				  			  </div>
+				  			</form>
+				  		</div>
+				  	</div>
+				  </div>
+				</nav>
+				<div class="cust-card d-none d-lg-block mt-4">
+					<div class="desc">
+						<form>
+						  <div class="form-row">
+						    <div class="form-group col-md-4">
+						      <label>From Date</label>
+						      <input type="text" id="dpFrom2" class="form-control">
+						    </div>
+						    <div class="form-group col-md-4">
+						      <label>To Date</label>
+						      <input type="text" id="dpTo2" class="form-control">
+						    </div>
+						    <div class="form-group col-md-4">
+						      <label>Instrument</label>
+						      <select class="form-control input-sm" id="cmbCompany">
+						          <option class="first-option">Select Instrument</option>
+						          <option value="1JANATAMF">1JANATAMF</option>
+						          <option value="1STBSRS">1STBSRS</option>
+						          <option value="1STICB">1STICB</option>
+						          <option value="1STPRIMFMF">1STPRIMFMF</option>
+						          <option value="2NDICB">2NDICB</option>
+						          <option value="3RDICB">3RDICB</option>
+						          <option value="4THICB">4THICB</option>
+						          <option value="5THICB">5THICB</option>
+						          <option value="6THICB">6THICB</option>
+						          <option value="7THICB">7THICB</option>
+						          <option value="8THICB">8THICB</option>
+						          <option value="AAMRANET">AAMRANET</option>
+						          <option value="AAMRATECH">AAMRATECH</option>
+						          <option value="ABB1STMF">ABB1STMF</option>
+						          <option value="ABBANK">ABBANK</option>
+						          <option value="ABBISCUIT">ABBISCUIT</option>
+						          <option value="ACFL">ACFL</option>
+						          <option value="ACI">ACI</option>
+						          <option value="ACIFORMULA">ACIFORMULA</option>
+						          <option value="ACIZCBOND">ACIZCBOND</option>
+						          <option value="ACMELAB">ACMELAB</option>
+						          <option value="ACMEPL">ACMEPL</option>
+						          <option value="ACTIVEFINE">ACTIVEFINE</option>
+						          <option value="ADNTEL">ADNTEL</option>
+						          <option value="ADVENT">ADVENT</option>
+						          <option value="AFCAGRO">AFCAGRO</option>
+						          <option value="AFTABAUTO">AFTABAUTO</option>
+						          <option value="AGNISYSL">AGNISYSL</option>
+						          <option value="AGRANINS">AGRANINS</option>
+						          <option value="AHADJUTE">AHADJUTE</option>
+						          <option value="AIBL1STIMF">AIBL1STIMF</option>
+						          <option value="AIL">AIL</option>
+						          <option value="AIMS1STMF">AIMS1STMF</option>
+						          <option value="AL-HAJTEX">AL-HAJTEX</option>
+						          <option value="ALAMINCHEM">ALAMINCHEM</option>
+						          <option value="ALARABANK">ALARABANK</option>
+						          <option value="ALBARAKA">ALBARAKA</option>
+						          <option value="ALHAJTEX">ALHAJTEX</option>
+						          <option value="ALLTEX">ALLTEX</option>
+						          <option value="ALPHATOBA">ALPHATOBA</option>
+						          <option value="AMAMSEAFD">AMAMSEAFD</option>
+						          <option value="AMANFEED">AMANFEED</option>
+						          <option value="AMBEEPHA">AMBEEPHA</option>
+						          <option value="AMCL(PRAN)">AMCL(PRAN)</option>
+						          <option value="ANLIMAYARN">ANLIMAYARN</option>
+						          <option value="ANWARGALV">ANWARGALV</option>
+						          <option value="AOL">AOL</option>
+						          <option value="APEXFOODS">APEXFOODS</option>
+						          <option value="APEXFOOT">APEXFOOT</option>
+						          <option value="APEXSPINN">APEXSPINN</option>
+						          <option value="APEXTANRY">APEXTANRY</option>
+						          <option value="APEXWEAV">APEXWEAV</option>
+						          <option value="APOLOISPAT">APOLOISPAT</option>
+						          <option value="APSCLBOND">APSCLBOND</option>
+						          <option value="ARACEMDEB">ARACEMDEB</option>
+						          <option value="ARAMIT">ARAMIT</option>
+						          <option value="ARAMITCEM">ARAMITCEM</option>
+						          <option value="ARBEETEX">ARBEETEX</option>
+						          <option value="ARGONDENIM">ARGONDENIM</option>
+						          <option value="AROMATEA">AROMATEA</option>
+						          <option value="ASHRAFTEX">ASHRAFTEX</option>
+						          <option value="ASIAINS">ASIAINS</option>
+						          <option value="ASIAPACINS">ASIAPACINS</option>
+						          <option value="ATCSLGF">ATCSLGF</option>
+						          <option value="ATLASBANG">ATLASBANG</option>
+						          <option value="AZADIPRIN">AZADIPRIN</option>
+						          <option value="AZIZPIPES">AZIZPIPES</option>
+						          <option value="B.T.C.">B.T.C.</option>
+						          <option value="BANGAS">BANGAS</option>
+						          <option value="BANGLAPRO">BANGLAPRO</option>
+						          <option value="BANKASIA">BANKASIA</option>
+						          <option value="BARKAPOWER">BARKAPOWER</option>
+						          <option value="BATASHOE">BATASHOE</option>
+						          <option value="BATBC">BATBC</option>
+						          <option value="BAYLEASING">BAYLEASING</option>
+						          <option value="BBS">BBS</option>
+						          <option value="BBSCABLES">BBSCABLES</option>
+						          <option value="BCIL">BCIL</option>
+						          <option value="BCILDEB">BCILDEB</option>
+						          <option value="BDAUTOCA">BDAUTOCA</option>
+						          <option value="BDCOM">BDCOM</option>
+						          <option value="BDCOM PRFS">BDCOM PRFS</option>
+						          <option value="BDDYE">BDDYE</option>
+						          <option value="BDFINANCE">BDFINANCE</option>
+						          <option value="BDHOTELS">BDHOTELS</option>
+						          <option value="BDLAMPS">BDLAMPS</option>
+						          <option value="BDLUGGAGE">BDLUGGAGE</option>
+						          <option value="BDLUGGDEB">BDLUGGDEB</option>
+						          <option value="BDONLINE">BDONLINE</option>
+						          <option value="BDPLANT">BDPLANT</option>
+						          <option value="BDSERVICE">BDSERVICE</option>
+						          <option value="BDTHAI">BDTHAI</option>
+						          <option value="BDTHAI(PS)">BDTHAI(PS)</option>
+						          <option value="BDTHAIFOOD">BDTHAIFOOD</option>
+						          <option value="BDWELDING">BDWELDING</option>
+						          <option value="BDZIPPDEB">BDZIPPDEB</option>
+						          <option value="BDZIPPER">BDZIPPER</option>
+						          <option value="BEACHHATCH">BEACHHATCH</option>
+						          <option value="BEACONPHAR">BEACONPHAR</option>
+						          <option value="BEMCO">BEMCO</option>
+						          <option value="BENGALBISC">BENGALBISC</option>
+						          <option value="BENGALFINE">BENGALFINE</option>
+						          <option value="BENGALWTL">BENGALWTL</option>
+						          <option value="BERGERPBL">BERGERPBL</option>
+						          <option value="BEXGSUKUK">BEXGSUKUK</option>
+						          <option value="BEXIMCO">BEXIMCO</option>
+						          <option value="BEXIMCODEB">BEXIMCODEB</option>
+						          <option value="BEXTEX">BEXTEX</option>
+						          <option value="BGIC">BGIC</option>
+						          <option value="BIFC">BIFC</option>
+						          <option value="BIONICFOOD">BIONICFOOD</option>
+						          <option value="BLTC">BLTC</option>
+						          <option value="BNICL">BNICL</option>
+						          <option value="BOC">BOC</option>
+						          <option value="BPHRM">BPHRM</option>
+						          <option value="BPML">BPML</option>
+						          <option value="BPPL">BPPL</option>
+						          <option value="BRACBANK">BRACBANK</option>
+						          <option value="BRACSCBOND">BRACSCBOND</option>
+						          <option value="BSC">BSC</option>
+						          <option value="BSCCL">BSCCL</option>
+						          <option value="BSRMLTD">BSRMLTD</option>
+						          <option value="BSRMSTEEL">BSRMSTEEL</option>
+						          <option value="BSTEEL">BSTEEL</option>
+						          <option value="BWEL">BWEL</option>
+						          <option value="BXDEB">BXDEB</option>
+						          <option value="BXDENIMDEB">BXDENIMDEB</option>
+						          <option value="BXDENIMS">BXDENIMS</option>
+						          <option value="BXFISHDEB">BXFISHDEB</option>
+						          <option value="BXFISHERY">BXFISHERY</option>
+						          <option value="BXINFDEB">BXINFDEB</option>
+						          <option value="BXINFUSION">BXINFUSION</option>
+						          <option value="BXKNIDEB">BXKNIDEB</option>
+						          <option value="BXKNIT">BXKNIT</option>
+						          <option value="BXKNITDEB">BXKNITDEB</option>
+						          <option value="BXPDEB">BXPDEB</option>
+						          <option value="BXPHARMA">BXPHARMA</option>
+						          <option value="BXSYNDEB">BXSYNDEB</option>
+						          <option value="BXSYNTH">BXSYNTH</option>
+						          <option value="BXTEX">BXTEX</option>
+						          <option value="BXTEXDEB">BXTEXDEB</option>
+						          <option value="CAPMBDBLMF">CAPMBDBLMF</option>
+						          <option value="CENTRALINS">CENTRALINS</option>
+						          <option value="CENTRALPHL">CENTRALPHL</option>
+						          <option value="CHICTEX">CHICTEX</option>
+						          <option value="CITYBANK">CITYBANK</option>
+						          <option value="CITYGENINS">CITYGENINS</option>
+						          <option value="CMCKAMAL">CMCKAMAL</option>
+						          <option value="CNATEX">CNATEX</option>
+						          <option value="CONFIDCEM">CONFIDCEM</option>
+						          <option value="CONTININS">CONTININS</option>
+						          <option value="COPPERTECH">COPPERTECH</option>
+						          <option value="CRYSTALINS">CRYSTALINS</option>
+						          <option value="CSE">CSE</option>
+						          <option value="CTGCEMENT">CTGCEMENT</option>
+						          <option value="CTGVEG">CTGVEG</option>
+						          <option value="CVOPRL">CVOPRL</option>
+						          <option value="DACCADYE">DACCADYE</option>
+						          <option value="DAFODILCOM">DAFODILCOM</option>
+						          <option value="DANDYDYE">DANDYDYE</option>
+						          <option value="DBH">DBH</option>
+						          <option value="DBH1STMF">DBH1STMF</option>
+						          <option value="DEBARACEM">DEBARACEM</option>
+						          <option value="DEBBDLUGG">DEBBDLUGG</option>
+						          <option value="DEBBDWELD ">DEBBDWELD </option>
+						          <option value="DEBBDZIPP">DEBBDZIPP</option>
+						          <option value="DEBBXDENIM">DEBBXDENIM</option>
+						          <option value="DEBBXFISH">DEBBXFISH</option>
+						          <option value="DEBBXKNI">DEBBXKNI</option>
+						          <option value="DEBBXTEX">DEBBXTEX</option>
+						          <option value="DELTALIFE">DELTALIFE</option>
+						          <option value="DELTAMILL">DELTAMILL</option>
+						          <option value="DELTASPINN">DELTASPINN</option>
+						          <option value="DESCO">DESCO</option>
+						          <option value="DESHBANDHU">DESHBANDHU</option>
+						          <option value="DGIC">DGIC</option>
+						          <option value="DHAKABANK">DHAKABANK</option>
+						          <option value="DHAKAFISH">DHAKAFISH</option>
+						          <option value="DHAKAINS">DHAKAINS</option>
+						          <option value="DHAKAVEG">DHAKAVEG</option>
+						          <option value="DOMINAGE">DOMINAGE</option>
+						          <option value="DOREENPWR">DOREENPWR</option>
+						          <option value="DSHGARME">DSHGARME</option>
+						          <option value="DSSL">DSSL</option>
+						          <option value="DULAMIACOT">DULAMIACOT</option>
+						          <option value="DUTCHBANGL">DUTCHBANGL</option>
+						          <option value="DYNAMICTEX">DYNAMICTEX</option>
+						          <option value="EAGLEBOX">EAGLEBOX</option>
+						          <option value="EAGLESTAR">EAGLESTAR</option>
+						          <option value="EASTERNINS">EASTERNINS</option>
+						          <option value="EASTLAND">EASTLAND</option>
+						          <option value="EASTRNLUB">EASTRNLUB</option>
+						          <option value="EBL">EBL</option>
+						          <option value="EBL1STMF">EBL1STMF</option>
+						          <option value="EBLNRBMF">EBLNRBMF</option>
+						          <option value="EBNRB1">EBNRB1</option>
+						          <option value="ECABLES">ECABLES</option>
+						          <option value="EGEN">EGEN</option>
+						          <option value="EHL">EHL</option>
+						          <option value="EHLDEB">EHLDEB</option>
+						          <option value="EIL">EIL</option>
+						          <option value="ELCAMELIA">ELCAMELIA</option>
+						          <option value="EMERALDOIL">EMERALDOIL</option>
+						          <option value="ENGINEER">ENGINEER</option>
+						          <option value="ENVOYTEX">ENVOYTEX</option>
+						          <option value="EPGL">EPGL</option>
+						          <option value="ESQUIRENIT">ESQUIRENIT</option>
+						          <option value="ETL">ETL</option>
+						          <option value="EXCELSHOE">EXCELSHOE</option>
+						          <option value="EXIM1STMF">EXIM1STMF</option>
+						          <option value="EXIMBANK">EXIMBANK</option>
+						          <option value="FAHAD">FAHAD</option>
+						          <option value="FAHADIND">FAHADIND</option>
+						          <option value="FAMILYTEX">FAMILYTEX</option>
+						          <option value="FARCHEM">FARCHEM</option>
+						          <option value="FAREASTFIN">FAREASTFIN</option>
+						          <option value="FAREASTLIF">FAREASTLIF</option>
+						          <option value="FASFIN ">FASFIN </option>
+						          <option value="FBFIF">FBFIF</option>
+						          <option value="FEDERALINS">FEDERALINS</option>
+						          <option value="FEKDIL">FEKDIL</option>
+						          <option value="FHDIL">FHDIL</option>
+						          <option value="FIDELASSET">FIDELASSET</option>
+						          <option value="FINEFOODS">FINEFOODS</option>
+						          <option value="FIRSTFIN">FIRSTFIN</option>
+						          <option value="FIRSTSBANK">FIRSTSBANK</option>
+						          <option value="FORTUNE">FORTUNE</option>
+						          <option value="FU-WANGFOO">FU-WANGFOO</option>
+						          <option value="FUWANGCER">FUWANGCER</option>
+						          <option value="FUWANGFOOD">FUWANGFOOD</option>
+						          <option value="GACHIHATA">GACHIHATA</option>
+						          <option value="GBBPOWER">GBBPOWER</option>
+						          <option value="GBJVFOOD">GBJVFOOD</option>
+						          <option value="GEM">GEM</option>
+						          <option value="GEMINISEA">GEMINISEA</option>
+						          <option value="GEMKNIT">GEMKNIT</option>
+						          <option value="GEMKNITWEAR">GEMKNITWEAR</option>
+						          <option value="GENEXIL">GENEXIL</option>
+						          <option value="GENNEXT">GENNEXT</option>
+						          <option value="GHAIL">GHAIL</option>
+						          <option value="GHCL">GHCL</option>
+						          <option value="GLAXOSMITH">GLAXOSMITH</option>
+						          <option value="GLAXOWELL">GLAXOWELL</option>
+						          <option value="GLOBALINS">GLOBALINS</option>
+						          <option value="GMGIND">GMGIND</option>
+						          <option value="GOLDENSON">GOLDENSON</option>
+						          <option value="GP">GP</option>
+						          <option value="GPHISPAT">GPHISPAT</option>
+						          <option value="GQBALLPEN">GQBALLPEN</option>
+						          <option value="GRAMEEN1">GRAMEEN1</option>
+						          <option value="GRAMEENS2">GRAMEENS2</option>
+						          <option value="GREENDELMF">GREENDELMF</option>
+						          <option value="GREENDELT">GREENDELT</option>
+						          <option value="GSPFINANCE">GSPFINANCE</option>
+						          <option value="GULFOODS">GULFOODS</option>
+						          <option value="HAKKANIPUL">HAKKANIPUL</option>
+						          <option value="HEIDELBCEM">HEIDELBCEM</option>
+						          <option value="HFL">HFL</option>
+						          <option value="HIGHSPEED">HIGHSPEED</option>
+						          <option value="HILLPLANT">HILLPLANT</option>
+						          <option value="HIMADRI">HIMADRI</option>
+						          <option value="HRTEX">HRTEX</option>
+						          <option value="HWAWELLTEX">HWAWELLTEX</option>
+						          <option value="IBBLPBOND">IBBLPBOND</option>
+						          <option value="IBNSINA">IBNSINA</option>
+						          <option value="IBP">IBP</option>
+						          <option value="ICB">ICB</option>
+						          <option value="ICB1STNRB">ICB1STNRB</option>
+						          <option value="ICB2NDNRB">ICB2NDNRB</option>
+						          <option value="ICB3RDNRB">ICB3RDNRB</option>
+						          <option value="ICBAGRANI1">ICBAGRANI1</option>
+						          <option value="ICBAMCL1ST">ICBAMCL1ST</option>
+						          <option value="ICBAMCL2ND">ICBAMCL2ND</option>
+						          <option value="ICBEPMF1S1">ICBEPMF1S1</option>
+						          <option value="ICBIBANK">ICBIBANK</option>
+						          <option value="ICBISLAMIC">ICBISLAMIC</option>
+						          <option value="ICBISLAMICBANK">ICBISLAMICBANK</option>
+						          <option value="ICBSONALI1">ICBSONALI1</option>
+						          <option value="IDLC">IDLC</option>
+						          <option value="IFADAUTOS">IFADAUTOS</option>
+						          <option value="IFIC">IFIC</option>
+						          <option value="IFIC1STMF">IFIC1STMF</option>
+						          <option value="IFILISLMF1">IFILISLMF1</option>
+						          <option value="ILFSL">ILFSL</option>
+						          <option value="IMAMBUTTON">IMAMBUTTON</option>
+						          <option value="INDEXAGRO">INDEXAGRO</option>
+						          <option value="INTECH">INTECH</option>
+						          <option value="INTRACO">INTRACO</option>
+						          <option value="IPDC">IPDC</option>
+						          <option value="ISLAMIBANK">ISLAMIBANK</option>
+						          <option value="ISLAMICFIN">ISLAMICFIN</option>
+						          <option value="ISLAMIINS">ISLAMIINS</option>
+						          <option value="ISLAMJUTE">ISLAMJUTE</option>
+						          <option value="ISNLTD">ISNLTD</option>
+						          <option value="ITC">ITC</option>
+						          <option value="JAGO">JAGO</option>
+						          <option value="JAMUNABANK">JAMUNABANK</option>
+						          <option value="JAMUNAOIL">JAMUNAOIL</option>
+						          <option value="JANATAINS">JANATAINS</option>
+						          <option value="JBCL">JBCL</option>
+						          <option value="JHCHEM">JHCHEM</option>
+						          <option value="JHCHEMICAL">JHCHEMICAL</option>
+						          <option value="JMISMDL">JMISMDL</option>
+						          <option value="JUTESPINN">JUTESPINN</option>
+						          <option value="KARIMPIPE">KARIMPIPE</option>
+						          <option value="KARNAPHULI">KARNAPHULI</option>
+						          <option value="KAY&amp;QUE">KAY&amp;QUE</option>
+						          <option value="KBPPWBIL">KBPPWBIL</option>
+						          <option value="KDSALTD">KDSALTD</option>
+						          <option value="KEYACOSMET">KEYACOSMET</option>
+						          <option value="KEYADETERG">KEYADETERG</option>
+						          <option value="KEYADTTERG">KEYADTTERG</option>
+						          <option value="KHAZA">KHAZA</option>
+						          <option value="KOHINOOR">KOHINOOR</option>
+						          <option value="KPCL">KPCL</option>
+						          <option value="KPPL">KPPL</option>
+						          <option value="KTL">KTL</option>
+						          <option value="LANKABAFIN">LANKABAFIN</option>
+						          <option value="LEGACYFOOT">LEGACYFOOT</option>
+						          <option value="LEXCO">LEXCO</option>
+						          <option value="LHBL">LHBL</option>
+						          <option value="LIBRAINFU">LIBRAINFU</option>
+						          <option value="LIBRAPHARM">LIBRAPHARM</option>
+						          <option value="LINDEBD">LINDEBD</option>
+						          <option value="LOVELLO">LOVELLO</option>
+						          <option value="LRBDL">LRBDL</option>
+						          <option value="LRGLOBMF1">LRGLOBMF1</option>
+						          <option value="MAKSONSPIN">MAKSONSPIN</option>
+						          <option value="MALEKSPIN">MALEKSPIN</option>
+						          <option value="MAQENTER">MAQENTER</option>
+						          <option value="MAQPAPER">MAQPAPER</option>
+						          <option value="MARICO">MARICO</option>
+						          <option value="MARKBD">MARKBD</option>
+						          <option value="MATINSPINN">MATINSPINN</option>
+						          <option value="MBL1STMF">MBL1STMF</option>
+						          <option value="MEGCONMILK">MEGCONMILK</option>
+						          <option value="MEGHNACEM">MEGHNACEM</option>
+						          <option value="MEGHNALIFE">MEGHNALIFE</option>
+						          <option value="MEGHNAPET">MEGHNAPET</option>
+						          <option value="MEGHNASHRM">MEGHNASHRM</option>
+						          <option value="MEGHNAVEG">MEGHNAVEG</option>
+						          <option value="MERCANBANK">MERCANBANK</option>
+						          <option value="MERCINS">MERCINS</option>
+						          <option value="METALEXCR">METALEXCR</option>
+						          <option value="METROSPIN">METROSPIN</option>
+						          <option value="MHOSSAIN">MHOSSAIN</option>
+						          <option value="MHSML">MHSML</option>
+						          <option value="MICEMENT">MICEMENT</option>
+						          <option value="MIDASFIN">MIDASFIN</option>
+						          <option value="MIRACLEIND">MIRACLEIND</option>
+						          <option value="MIRAKHTER">MIRAKHTER</option>
+						          <option value="MITATEX">MITATEX</option>
+						          <option value="MITHUNKNIT">MITHUNKNIT</option>
+						          <option value="MJLBD">MJLBD</option>
+						          <option value="MLDYEING">MLDYEING</option>
+						          <option value="MODERNCEM">MODERNCEM</option>
+						          <option value="MODERNDYE">MODERNDYE</option>
+						          <option value="MODERNIND">MODERNIND</option>
+						          <option value="MONAFOOD">MONAFOOD</option>
+						          <option value="MONNOCERA">MONNOCERA</option>
+						          <option value="MONNOFABR">MONNOFABR</option>
+						          <option value="MONNOJTX">MONNOJTX</option>
+						          <option value="MONNOSTAF">MONNOSTAF</option>
+						          <option value="MONOSPOOL">MONOSPOOL</option>
+						          <option value="MPETROLEUM">MPETROLEUM</option>
+						          <option value="MTB">MTB</option>
+						          <option value="MUTUALJUTE">MUTUALJUTE</option>
+						          <option value="NAHEEACP">NAHEEACP</option>
+						          <option value="NATLIFEINS">NATLIFEINS</option>
+						          <option value="NATOXYGEN">NATOXYGEN</option>
+						          <option value="NAVANACNG">NAVANACNG</option>
+						          <option value="NBL">NBL</option>
+						          <option value="NCCBANK">NCCBANK</option>
+						          <option value="NCCBLMF1">NCCBLMF1</option>
+						          <option value="NEWLINE">NEWLINE</option>
+						          <option value="NFML">NFML</option>
+						          <option value="NHFIL">NHFIL</option>
+						          <option value="NILOYCEM">NILOYCEM</option>
+						          <option value="NITOLINS">NITOLINS</option>
+						          <option value="NLI1STMF">NLI1STMF</option>
+						          <option value="NORTHERN">NORTHERN</option>
+						          <option value="NORTHRNINS">NORTHRNINS</option>
+						          <option value="NPOLYMER">NPOLYMER</option>
+						          <option value="NRBCBANK">NRBCBANK</option>
+						          <option value="NTC">NTC</option>
+						          <option value="NTLTUBES">NTLTUBES</option>
+						          <option value="NURANI">NURANI</option>
+						          <option value="OAL">OAL</option>
+						          <option value="OCL">OCL</option>
+						          <option value="OIMEX">OIMEX</option>
+						          <option value="OLYMPIC">OLYMPIC</option>
+						          <option value="ONEBANKLTD">ONEBANKLTD</option>
+						          <option value="ORIONINFU">ORIONINFU</option>
+						          <option value="ORIONPHARM">ORIONPHARM</option>
+						          <option value="PADMACEM">PADMACEM</option>
+						          <option value="PADMALIFE">PADMALIFE</option>
+						          <option value="PADMAOIL">PADMAOIL</option>
+						          <option value="PADMAPRINT">PADMAPRINT</option>
+						          <option value="PAPERPROC">PAPERPROC</option>
+						          <option value="PARAGON">PARAGON</option>
+						          <option value="PARAMOUNT">PARAMOUNT</option>
+						          <option value="PDL">PDL</option>
+						          <option value="PENINSULA">PENINSULA</option>
+						          <option value="PEOPLESINS">PEOPLESINS</option>
+						          <option value="PERFUMCHM">PERFUMCHM</option>
+						          <option value="PETROSYNTH">PETROSYNTH</option>
+						          <option value="PF1STMF">PF1STMF</option>
+						          <option value="PHARMACO">PHARMACO</option>
+						          <option value="PHARMAID">PHARMAID</option>
+						          <option value="PHENIXINS">PHENIXINS</option>
+						          <option value="PHENIXLETH">PHENIXLETH</option>
+						          <option value="PHOENIXFIN">PHOENIXFIN</option>
+						          <option value="PHPMF1">PHPMF1</option>
+						          <option value="PIONEERINS">PIONEERINS</option>
+						          <option value="PLFSL">PLFSL</option>
+						          <option value="PLFSL PRFF">PLFSL PRFF</option>
+						          <option value="POPULAR1MF">POPULAR1MF</option>
+						          <option value="POPULARLIF">POPULARLIF</option>
+						          <option value="POWERGRID">POWERGRID</option>
+						          <option value="PRAGATIINS">PRAGATIINS</option>
+						          <option value="PRAGATILIF">PRAGATILIF</option>
+						          <option value="PREMIERBAN">PREMIERBAN</option>
+						          <option value="PREMIERCEM ">PREMIERCEM </option>
+						          <option value="PREMIERLEA">PREMIERLEA</option>
+						          <option value="PRIME1ICBA">PRIME1ICBA</option>
+						          <option value="PRIMEBANK">PRIMEBANK</option>
+						          <option value="PRIMEFIN">PRIMEFIN</option>
+						          <option value="PRIMEINSUR">PRIMEINSUR</option>
+						          <option value="PRIMELIFE">PRIMELIFE</option>
+						          <option value="PRIMETEX">PRIMETEX</option>
+						          <option value="PROGRESLIF">PROGRESLIF</option>
+						          <option value="PROVATIINS">PROVATIINS</option>
+						          <option value="PTL">PTL</option>
+						          <option value="PUBALIBANK">PUBALIBANK</option>
+						          <option value="PURABIGEN">PURABIGEN</option>
+						          <option value="QSMSILK">QSMSILK</option>
+						          <option value="QSMTEX">QSMTEX</option>
+						          <option value="QUASEMIND">QUASEMIND</option>
+						          <option value="QUEENSOUTH">QUEENSOUTH</option>
+						          <option value="RABEYAFLO">RABEYAFLO</option>
+						          <option value="RAHIMAFOOD">RAHIMAFOOD</option>
+						          <option value="RAHIMTEXT">RAHIMTEXT</option>
+						          <option value="RAHMANCHEM">RAHMANCHEM</option>
+						          <option value="RAKCERAMIC">RAKCERAMIC</option>
+						          <option value="RANFOUNDRY">RANFOUNDRY</option>
+						          <option value="RANGAFOOD">RANGAFOOD</option>
+						          <option value="RASPIT">RASPIT</option>
+						          <option value="RASPITDATA">RASPITDATA</option>
+						          <option value="RDFOOD">RDFOOD</option>
+						          <option value="RECKIT&amp;COL">RECKIT&amp;COL</option>
+						          <option value="RECKITTBEN">RECKITTBEN</option>
+						          <option value="REGENTTEX">REGENTTEX</option>
+						          <option value="RELIANCE1">RELIANCE1</option>
+						          <option value="RELIANCINS">RELIANCINS</option>
+						          <option value="RENATA">RENATA</option>
+						          <option value="RENWICKJA">RENWICKJA</option>
+						          <option value="REPUBLIC">REPUBLIC</option>
+						          <option value="RINGSHINE">RINGSHINE</option>
+						          <option value="RNSPIN">RNSPIN</option>
+						          <option value="ROBI">ROBI</option>
+						          <option value="ROSEHEAVEN">ROSEHEAVEN</option>
+						          <option value="RSRMSTEEL">RSRMSTEEL</option>
+						          <option value="RUNNERAUTO">RUNNERAUTO</option>
+						          <option value="RUPALIBANK">RUPALIBANK</option>
+						          <option value="RUPALIINS">RUPALIINS</option>
+						          <option value="RUPALILIFE">RUPALILIFE</option>
+						          <option value="RUPONOIL">RUPONOIL</option>
+						          <option value="S ALAM(P)">S ALAM(P)</option>
+						          <option value="SAFKOSPINN">SAFKOSPINN</option>
+						          <option value="SAIFPOWER">SAIFPOWER</option>
+						          <option value="SAIHAMCOT">SAIHAMCOT</option>
+						          <option value="SAIHAMTEX">SAIHAMTEX</option>
+						          <option value="SAJIBKNIT">SAJIBKNIT</option>
+						          <option value="SALAMCRST">SALAMCRST</option>
+						          <option value="SALEHCARPT">SALEHCARPT</option>
+						          <option value="SALVOCHEM">SALVOCHEM</option>
+						          <option value="SAMATALETH">SAMATALETH</option>
+						          <option value="SAMORITA">SAMORITA</option>
+						          <option value="SANDHANINS">SANDHANINS</option>
+						          <option value="SAPORTL">SAPORTL</option>
+						          <option value="SAVAREFR">SAVAREFR</option>
+						          <option value="SBACBANK">SBACBANK</option>
+						          <option value="SEAPEARL">SEAPEARL</option>
+						          <option value="SEBL1STMF">SEBL1STMF</option>
+						          <option value="SEMLFBSLGF">SEMLFBSLGF</option>
+						          <option value="SEMLIBBLSF">SEMLIBBLSF</option>
+						          <option value="SEMLLECMF">SEMLLECMF</option>
+						          <option value="SHAHJABANK">SHAHJABANK</option>
+						          <option value="SHASHADNIM">SHASHADNIM</option>
+						          <option value="SHEPHERD">SHEPHERD</option>
+						          <option value="SHINEPUKUR">SHINEPUKUR</option>
+						          <option value="SHURWID">SHURWID</option>
+						          <option value="SHYAMPSUG">SHYAMPSUG</option>
+						          <option value="SIBL">SIBL</option>
+						          <option value="SILCOPHL">SILCOPHL</option>
+						          <option value="SILVAPHL">SILVAPHL</option>
+						          <option value="SIMTEX">SIMTEX</option>
+						          <option value="SINGERBD">SINGERBD</option>
+						          <option value="SINOBANGLA">SINOBANGLA</option>
+						          <option value="SKICL">SKICL</option>
+						          <option value="SKTRIMS">SKTRIMS</option>
+						          <option value="SONALIANSH">SONALIANSH</option>
+						          <option value="SONALILIFE">SONALILIFE</option>
+						          <option value="SONALIPAPR">SONALIPAPR</option>
+						          <option value="SONARBAINS">SONARBAINS</option>
+						          <option value="SONARGAON">SONARGAON</option>
+						          <option value="SOUTHEASTB">SOUTHEASTB</option>
+						          <option value="SPCERAMICS">SPCERAMICS</option>
+						          <option value="SPCL">SPCL</option>
+						          <option value="SPPCL">SPPCL</option>
+						          <option value="SQTEX">SQTEX</option>
+						          <option value="SQUARETEXT">SQUARETEXT</option>
+						          <option value="SQURPHARMA">SQURPHARMA</option>
+						          <option value="SREEPURTEX">SREEPURTEX</option>
+						          <option value="SSSTEEL">SSSTEEL</option>
+						          <option value="STANCERAM">STANCERAM</option>
+						          <option value="STANDARINS">STANDARINS</option>
+						          <option value="STANDBANKL">STANDBANKL</option>
+						          <option value="STM(ORD)">STM(ORD)</option>
+						          <option value="STYLECRAFT">STYLECRAFT</option>
+						          <option value="SUMITPOWER">SUMITPOWER</option>
+						          <option value="SUMMIT PRF">SUMMIT PRF</option>
+						          <option value="SUNLIFEINS">SUNLIFEINS</option>
+						          <option value="TAKAFULINS">TAKAFULINS</option>
+						          <option value="TALLUSPIN">TALLUSPIN</option>
+						          <option value="TAMIJTEX">TAMIJTEX</option>
+						          <option value="TBL">TBL</option>
+						          <option value="test">test</option>
+						          <option value="TEXPICK">TEXPICK</option>
+						          <option value="TITASGAS">TITASGAS</option>
+						          <option value="TOSRIFA">TOSRIFA</option>
+						          <option value="TRIPTI">TRIPTI</option>
+						          <option value="TRUSTB1MF">TRUSTB1MF</option>
+						          <option value="TRUSTBANK">TRUSTBANK</option>
+						          <option value="TULIPDAIRY">TULIPDAIRY</option>
+						          <option value="TUNGHAI">TUNGHAI</option>
+						          <option value="UCB">UCB</option>
+						          <option value="ULC">ULC</option>
+						          <option value="UNIONBANK">UNIONBANK</option>
+						          <option value="UNIONCAP">UNIONCAP</option>
+						          <option value="UNIONINS">UNIONINS</option>
+						          <option value="UNIQUEHRL">UNIQUEHRL</option>
+						          <option value="UNITEDAIR">UNITEDAIR</option>
+						          <option value="UNITEDFIN">UNITEDFIN</option>
+						          <option value="UNITEDINS">UNITEDINS</option>
+						          <option value="UPGDCL">UPGDCL</option>
+						          <option value="USMANIAGL">USMANIAGL</option>
+						          <option value="UTTARABANK">UTTARABANK</option>
+						          <option value="UTTARAFIN">UTTARAFIN</option>
+						          <option value="VAMLBDMF1">VAMLBDMF1</option>
+						          <option value="VAMLRBBF">VAMLRBBF</option>
+						          <option value="VFSTDL">VFSTDL</option>
+						          <option value="WALTONHIL">WALTONHIL</option>
+						          <option value="WATACHEM">WATACHEM</option>
+						          <option value="WMSHIPYARD">WMSHIPYARD</option>
+						          <option value="WONDERTOYS">WONDERTOYS</option>
+						          <option value="YOUSUFLOUR">YOUSUFLOUR</option>
+						          <option value="YPL">YPL</option>
+						          <option value="ZAHEENSPIN">ZAHEENSPIN</option>
+						          <option value="ZAHINTEX">ZAHINTEX</option>
+						          <option value="ZEALBANGLA">ZEALBANGLA</option>
+						      </select>
+						    </div>
+						    <div class="form-group col-md-4 offset-md-4 text-center">
+						      <button type="submit" class="btn btn-primary pl-3 pr-3">Search</button>
+						    </div>
+						  </div>
+						</form>
+					</div>
+				</div>
+				<div class="cust-card mt-1 mt-lg-3">
+					<div class="desc">
+						<div class="desc no-news text-center">
+							<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="98" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+							<path class="st0" d="M505,471L371,337c28.1-35.5,45-80.2,45-129C416,93.1,322.9,0,208,0S0,93.1,0,208c0,114.9,93.1,208,208,208
+								c48.8,0,93.5-16.9,129-45l134,134c4.7,4.7,10.8,7,17,7s12.3-2.3,17-7C514.3,495.6,514.3,480.4,505,471z M208,368
+								c-88.2,0-160-71.8-160-160c0-88.2,71.8-160,160-160c88.2,0,160,71.8,160,160C368,296.2,296.2,368,208,368z"/>
+							<path class="st0" d="M281.5,247.6L241.9,208l39.6-39.6c9.4-9.4,9.4-24.6,0-33.9s-24.6-9.4-33.9,0L208,174.1l-39.6-39.6
+								c-9.4-9.4-24.6-9.4-33.9,0s-9.4,24.6,0,33.9l39.6,39.6l-39.6,39.6c-9.4,9.4-9.4,24.6,0,33.9c9.4,9.4,24.6,9.4,33.9,0l39.6-39.6
+								l39.6,39.6c9.4,9.4,24.6,9.4,33.9,0S290.9,257,281.5,247.6z"/>
+							</svg>
+							<h2>No news found</h2>
+						</div>
+					</div>
+				</div>
+				<div class="cust-card">
+					<div class="desc">
+						<div class="counter">
+							<span>2</span>
+						</div>
+						<div class="news">
+							<div class="date">
+								<i class="fa-solid fa-calendar-days"></i>
+								<span>03/04/2022</span>
+							</div>
+							<div class="trading-code">
+								<i class="fa-solid fa-hashtag"></i>
+								<span>BAN</span>
+							</div>
+							<div class="news-text">
+								<span>(Continuation of DSENEWS): respective clients are requested to submit complaints within May 15, 2022. Please note that after the stipulated time, no claim will be entertained and clients who have already submitted the claim earlier, need not apply again. For any query, please contact with Investor Complaints, Arbitration and Litigation Dept. of DSE (Telephone: 09666702070, Ext.- 1642, 1643, 1644 and 1645; Hot line: +88-01713276415. (end)</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="custom-indicators mt-5">
+					<div class="wrapper" title="First Page">
+						<i class="fa-solid fa-angles-left"></i>
+					</div>
+					<div class="wrapper" title="Previous Page">
+						<span><i class="fa-solid fa-chevron-left"></i></span>
+					</div>
+					<div class="wrapper">
+						<span>1</span>
+					</div>
+					<div class="wrapper">
+						<span>2</span>
+					</div>
+					<div class="wrapper active">
+						<span>3</span>
+					</div>
+					<div class="wrapper">
+						<span>4</span>
+					</div>
+					<div class="wrapper">
+						<span>5</span>
+					</div>
+					<div class="wrapper" title="Next Page">
+						<span><i class="fa-solid fa-chevron-right"></i></span>
+					</div>
+					<div class="wrapper" title="Last Page">
+						<i class="fa-solid fa-angles-right"></i>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--============================
+	=            footer            =
+	=============================-->
+	<section w3-include-html="includes/footer.html">
+	</section>
+</body>
+<!-- scripts -->
+<script>
+	includeHTML();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" crossorigin="anonymous"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+  $( function() {
+    $( "#dpFrom" ).datepicker(
+    	{
+    	   changeYear               : true,
+    	   changeMonth              : true,
+    	   yearRange                : "-70:+40",
+    	   maxDate                  : "+40Y",
+    	   minDate                  : "-85Y",
+    	   dateFormat: 'dd/mm/yy'
+    	});
+    $( "#dpTo" ).datepicker(
+    	{
+    	   changeYear               : true,
+    	   changeMonth              : true,
+    	   yearRange                : "-70:+40",
+    	   maxDate                  : "+40Y",
+    	   minDate                  : "-85Y",
+    	   dateFormat: 'dd/mm/yy'
+    	});
+    $( "#dpFrom2" ).datepicker(
+    	{
+    	   changeYear               : true,
+    	   changeMonth              : true,
+    	   yearRange                : "-70:+40",
+    	   maxDate                  : "+40Y",
+    	   minDate                  : "-85Y",
+    	   dateFormat: 'dd/mm/yy'
+    	});
+    $( "#dpTo2" ).datepicker(
+    	{
+    	   changeYear               : true,
+    	   changeMonth              : true,
+    	   yearRange                : "-70:+40",
+    	   maxDate                  : "+40Y",
+    	   minDate                  : "-85Y",
+    	   dateFormat: 'dd/mm/yy'
+    	});
+  });
+ </script>
+</html>

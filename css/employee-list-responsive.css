@@ -1,0 +1,8 @@
+.em-info-wrapper {
+	width: 100%;
+	border: 1px solid var(--blue);
+}
+
+.em-info-wrapper img {
+	width: 100%;
+}

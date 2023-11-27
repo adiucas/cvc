@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px){
+	.cp-img div {
+	    width: 80px;
+	    height: 80px;
+	    margin-bottom: 10px;
+	}
+	.cp-img {
+	    justify-content: center;
+	}
+	.cp-main-card .name-id {
+	    text-align: center;
+	}
+	
+}

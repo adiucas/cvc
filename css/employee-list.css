@@ -1,0 +1,45 @@
+.em-details .col-lg-4 {
+	display: flex;
+}
+
+.em-info-wrapper {
+	width: 100%;
+	border: 1px solid var(--blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.em-img {
+	padding: 15px;
+	display: flex;
+	justify-content: center;
+}
+
+.em-img .wrapper {
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-start;
+	border: 1px solid #dddddd;
+}
+
+.em-info-wrapper img {
+	width: 100%;
+}
+
+.em-info {
+	background: #EEEEEE;
+	padding: 15px;
+}
+
+.em-info h5 {
+	color: var(--blue);
+}
+
+.em-info>h5+p {
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	border-bottom: 1px solid var(--blue);
+}

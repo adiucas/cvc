@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<!-- opengraph -->
+	<!-- <meta property="og:image" content="images/thumbnail.jpg"> -->
+	<title>Login | E-Securities Ltd.</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="css/owl-caro/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl-caro/owl.theme.default.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/common-responsive.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="css/index-responsive.css">
+	<!-- scripts -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<!--============================
+	=            header            =
+	=============================-->
+	<section class="sticky-top" w3-include-html="includes/header-public.html">
+	</section>
+
+	<!--=============================
+	=            content            =
+	==============================-->
+	<div class="login-section">
+		<div class="welcome-text">
+			<span>welcome to the</span>
+			<span>client portal</span>
+		</div>
+		<div id="loginCard" class="login-card">
+			<div class="get-otp-section">
+				<div class="section-title">
+					sign in
+				</div>
+				<div class="input-group">
+					<div class="input-group-prepend">
+						<span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-user"></i></span>
+					</div>
+					<input type="text" class="form-control" placeholder="Investor Code" aria-label="Username" aria-describedby="basic-addon1">
+				</div>
+				<div class="get-otp mt-2">
+					<span class="mb-2 mb-lg-0">Get OTP By</span>
+					<div class="otp-wrapper">
+						<input type="radio" name="select" id="option-1">
+						<input type="radio" name="select" id="option-2" checked>
+						<label for="option-1" class="option option-1 mr-lg-3 mr-2">
+							<div class="dot"></div>
+							<span>E-Mail</span>
+						</label>
+						<label for="option-2" class="option option-2">
+							<div class="dot"></div>
+							<span>Phone</span>
+						</label>
+					</div>
+				</div>
+				<button id="otpBtn" type="button" onclick="countdown(0, 10)"  class="btn btn-primary btn-sm mt-3 w-100">SUBMIT</button>
+			</div>
+			<div class="otp-input-section">
+				<div id="otpInput" class="input-group input-group-lg otp-input">
+					<div class="alert alert-danger" role="alert">
+						Your OTP has been sent to your E-Mail/Phone
+					</div>
+					<div class="otp-user-info mb-3">
+						<div class="name-image">
+							<div>
+								<img src="images/person.png" alt="">
+							</div>
+							<p class="ml-3">
+								<strong>Arafat Hossain Adi</strong>
+								<span>
+									A5421
+								</span>
+							</p>
+						</div>
+						<div class="email-phone mt-2">
+							<span><i class="fa-solid fa-envelope"></i> &nbsp;adi@ucasbd.com</span>
+							<span class="mt-2 mt-lg-0"><i class="fa-solid fa-phone"></i>&nbsp; 01625423992</span>
+						</div>
+					</div>
+					<div class="otp-input-wrapper input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-key"></i></span>
+						</div>
+						<input type="text" class="form-control" placeholder="Enter your OTP" aria-label="OTP" aria-describedby="basic-addon1" style="border-bottom-right-radius: .25rem; border-top-right-radius: .25rem;">
+						<button id="resetBtn" title="Resend OTP" onclick="countdown(0,5)" class="btn btn-primary btn-reset-otp ml-3"><i class="fa-solid fa-rotate-left"></i></button>
+					</div>
+					<div id="otpTimer" class="alert alert-warning otp-timer mt-2">
+					</div>
+					<button type="button" class="btn btn-primary btn-sm mt-3 w-100">SUBMIT</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--============================
+	=            footer            =
+	=============================-->
+	<section w3-include-html="includes/footer.html">
+	</section>
+</body>
+<!-- scripts -->
+<script>
+	includeHTML();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" crossorigin="anonymous"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/index.js"></script>
+</html>

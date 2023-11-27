@@ -1,0 +1,10 @@
+.req-amount{
+	padding: 30px;
+	display: flex;
+	border: 1px solid #eeeeee;
+}
+
+.table .thead .tr .th, .table .tbody .tr .td{
+	flex-basis: 20%;
+}
+

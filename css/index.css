@@ -1,0 +1,54 @@
+.login-section {
+	min-height: calc(100vh - 103px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-right: 15px;
+	padding-left: 15px;
+	flex-direction: column;
+}
+
+.login-card {
+	background: #ffffff;
+	padding: 15px;
+	position: unset;
+	opacity: 1;
+	transition: opacity 0.3s ease;
+	max-width: 400px;
+	width: 100%;
+	display: unset;
+	border: 1px solid var(--blue);
+	border-radius: 10px;
+}
+
+.otp-input .alert {
+	font-size: 14px;
+}
+
+.welcome-text {
+	text-align: center;
+	margin-bottom: 30px;
+	text-transform: uppercase;
+}
+
+.welcome-text>span {
+	font-size: 20px;
+	font-weight: lighter;
+	display: block;
+	margin-bottom: -10px;
+	color: var(--red);
+}
+
+.welcome-text>span+span {
+	font-size: 32px;
+	font-weight: bold;
+	color: var(--blue);
+}
+
+.welcome-text>span+span::after {
+	content: "";
+	display: block;
+	border: 2px solid var(--blue);
+	width: 100%;
+	margin: -5px auto 0 auto;
+}

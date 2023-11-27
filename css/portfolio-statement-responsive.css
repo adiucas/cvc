@@ -1,0 +1,13 @@
+/**
+
+	Baraka Securities
+	Latest News
+
+ */
+
+@media only screen and (max-width: 768px){
+	.ra-sm-card{
+		margin-top: 10px;
+		justify-content: center !important;
+	}
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<!-- opengraph -->
+	<!-- <meta property="og:image" content="images/thumbnail.jpg"> -->
+	<title>Capital Gain Loss Statement | E-Securities Ltd.</title>
+	<link rel="icon" type="image/x-icon" href="images/favicon.png">
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="css/jquery-ui.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/common-responsive.css">
+	<!-- scripts -->
+	<script src="js/jquery-3.6.0.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/main.js"></script>
+</head>
+<body>
+	<!--============================
+	=            header            =
+	=============================-->
+	<section class="sticky-top" w3-include-html="includes/header.html">
+	</section>
+
+	<!--====================================
+	=            captial gain loss           =
+	=====================================-->
+	<div class="container-fluid bg-lgreen footer-fix">
+		<div class="row">
+			<div class="container ptb30">
+				<div class="section-title">
+					Capital Gain-Loss Statement
+				</div>
+				<div class="cust-card mt-4">
+					<div class="desc">
+						<form>
+						  <div class="form-row">
+						    <div class="form-group col-lg-6 ra-card">
+						      <div>
+						      	<label>From Date</label>
+						      	<input type="text" id="dpFrom" class="form-control">
+						      </div>
+						    </div>
+						    <div class="form-group col-lg-6 ra-card">
+						      <div>
+						      	<label>To Date</label>
+						      	<input type="text" id="dpTo" class="form-control">
+						      </div>
+						    </div>
+						    <div class="form-group col-lg-6 ra-card justify-content-end">
+						      <div>
+						      	<label>Report Type</label>
+						      	<select class="form-control" id="cmbReportType">
+						      	    <option selected>Select Report Type</option>
+						      	    <option value="Pdf">Pdf</option>
+						      	    <option value="ExcelBook">Microsoft Excel</option>
+						      	    <option value="Excel">Microsoft Excel (97-2003)</option>
+						      	    <option value="ExcelData">Microsoft Excel (97-2003) Data-Only</option>
+						      	    <option value="Word">Microsoft Word (97-2003)</option>
+						      	    <option value="XML">XML</option>
+						      	</select>
+						      </div>
+						    </div>
+						    <div class="form-group col-lg-2 offset-0 offset-lg-1 ra-card ra-sm-card d-lg-flex d-block align-items-end">
+						      <button title="show" class="btn btn-primary"><i class="fa-solid fa-file-lines"></i><span class="d-lg-none ml-2">Show</span></button>
+						    </div>
+						  </div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--============================
+	=            footer            =
+	=============================-->
+	<section w3-include-html="includes/footer.html">
+	</section>
+</body>
+<!-- scripts -->
+<script>
+	includeHTML();
+	$('.first-option').hide();
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" crossorigin="anonymous"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+  $( function() {
+    $( "#dpFrom" ).datepicker(
+    	{
+    	   changeYear               : true,
+    	   changeMonth              : true,
+    	   yearRange                : "-70:+40",
+    	   maxDate                  : "+40Y",
+    	   minDate                  : "-85Y",
+    	   dateFormat: 'dd/mm/yy'
+    	});
+    $( "#dpTo" ).datepicker(
+    	{
+    	   changeYear               : true,
+    	   changeMonth              : true,
+    	   yearRange                : "-70:+40",
+    	   maxDate                  : "+40Y",
+    	   minDate                  : "-85Y",
+    	   dateFormat: 'dd/mm/yy'
+    	});
+  });
+ </script>
+</html>
